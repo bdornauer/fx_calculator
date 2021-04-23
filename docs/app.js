@@ -30,3 +30,18 @@ document.querySelector('button').addEventListener('click', async () => {
     const outputValue = await convert(inputValue, inputCurrency, outputCurrency);
     document.querySelector('[name="output-value"]').value = round(outputValue, 2);
 });
+
+
+window.addEventListener("beforeinstallprompt", async function (event) {
+    event.preventDefault();
+    document.querySelector("article").style.display = "block"; // make it visible if browser support
+
+    document.getElementById('acceptButton').addEventListener('click', () => {
+        event.prompt();
+        document.querySelector("article").style.display = "none"; // make it visible if browser support
+    });
+
+    document.getElementById('dontAcceptButton').addEventListener('click', () => {
+        document.querySelector("article").style.display = "none"; // make it visible if browser support
+    });
+});

@@ -33,9 +33,22 @@ section select {
     border:1px solid #aaa;
     border-left: none;
 }
+
 button {
     border:1px solid black;
     background:white;
     width:100%;
     padding:8px;
+}
+
+article{
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 10px;
+    padding: 2.5vw;
+    margin: 2.5vw;
+    display: none;
+    width: 90vw;
 }
